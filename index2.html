@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXAMEN FERNANDO CASTRO SORTEO LOTERIA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>EL CHOLLAZO</h1>
+    <div class="container">
+      <h2>Sorteo El Chollazo</h2>
+      
+      <div class="premio-info" id="premio-1-info">
+        <div class="button" onclick="mostrarPremio(1)">1º Premio</div>
+        <div class="numeros-premiados" id="premio-1-numeros"></div>
+      </div>
+      <div class="premio-info" id="premio-2-info">
+        <div class="button" onclick="mostrarPremio(2)">2º Premio</div>
+        <div class="numeros-premiados" id="premio-2-numeros"></div>
+      </div>
+      <div class="premio-info" id="premio-3-info">
+        <div class="button" onclick="mostrarPremio(3)">3º Premio</div>
+        <div class="numeros-premiados" id="premio-3-numeros"></div>
+      </div>
+
+      <button class="button" onclick="comprobarPremio()">Comprobar Premio</button>
+
+      <div id="formulario" style="display: none;" >
+        <h2>Felicidades, has ganado!</h2>
+        <p>Por favor, completa tus datos:</p>
+        <form action=""id="datosForm" onsubmit="return validarFormulario()" method="get">
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+          <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+          <input type="text" id="dni" name="dni" placeholder="DNI" required pattern="[0-9]{8}[A-Za-z]"
+          >
+          <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+          <input type="tel"  id="telefono" name="telefono" placeholder="Teléfono (9 dígitos numéricos)" required pattern="^[679]{1}[0-9]{8}$">
+          <button type="submit" class="button">Enviar</button>
+          <button type="reset" class="button">Cancelar</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+  
+  <script src="app2.js"></script>
+
+</body>
+</html>
+
